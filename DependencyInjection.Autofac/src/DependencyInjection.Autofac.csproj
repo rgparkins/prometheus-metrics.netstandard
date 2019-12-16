@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <RootNamespace>rgparkins.PrometheusMetrics.Netstandard.Autofac</RootNamespace>
+        <PackageId>PrometheusMetrics.Netstandard.Autofac</PackageId>
+        <AssemblyName>rgparkins.PrometheusMetrics.Netstandard.DependencyInjection.Autofac</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Autofac" Version="4.8.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="package.sh" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Core\src\Core.csproj" />
+    </ItemGroup>
+
+</Project>

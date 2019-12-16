@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.1</TargetFramework>
+        <AssemblyName>rgparkins.PrometheusMetrics.Netstandard.Stores.Console</AssemblyName>
+        <RootNamespace>rgparkins.PrometheusMetrics.Netstandard.Stores.Console</RootNamespace>
+        <PackageId>PrometheusMetrics.Netstandard.Stores.Console</PackageId>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Core\src\Core.csproj" />
+    </ItemGroup>
+
+</Project>
