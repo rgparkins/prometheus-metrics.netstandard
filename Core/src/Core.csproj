@@ -5,6 +5,7 @@
         <RootNamespace>rgparkins.PrometheusMetrics.Netstandard</RootNamespace>
         <PackageId>PrometheusMetrics.Netstandard</PackageId>
         <AssemblyName>rgparkins.PrometheusMetrics.Netstandard</AssemblyName>
+        <PackageProjectUrl>https://github.com/rgparkins/prometheus-metrics.netstandard</PackageProjectUrl>
     </PropertyGroup>
 
     <ItemGroup>

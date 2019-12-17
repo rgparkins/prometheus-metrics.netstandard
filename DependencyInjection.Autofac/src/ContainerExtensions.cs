@@ -8,5 +8,10 @@ namespace rgparkins.PrometheusMetrics.Netstandard.Autofac
         {
             bldr.RegisterModule(new MetricsModule(storeToUse));
         }
+        
+        public static void RegisterMetrics(this ContainerBuilder bldr)
+        {
+            bldr.RegisterModule(c => new MetricsModule(;
+        }
     }
 }

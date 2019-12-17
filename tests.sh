@@ -11,10 +11,11 @@ error() {
 cleanup() {
   echo "....Cleaning up"
   
-  # remove untagged images (these are left behind when docker run fails)
-  if [ $(docker images | grep '^<none>' | wc -c) -gt 0 ]; then
-    docker images | grep "^<none>" | tr -s " " " " | cut -f3 -d" " | ifne xargs docker rmi
+  if [ "$(docker images -f "dangling=true" -q | awk '{print $3}' | sort -u)x" != "x" ]
+  then
+    docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
   fi
+
   echo ""
   echo "....Cleaning up done"
 }

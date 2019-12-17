@@ -3,6 +3,7 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <RootNamespace>rgparkins.PrometheusMetrics.Netstandard.Autofac</RootNamespace>
+        <PackageProjectUrl>https://github.com/rgparkins/prometheus-metrics.netstandard</PackageProjectUrl>
         <PackageId>PrometheusMetrics.Netstandard.Autofac</PackageId>
         <AssemblyName>rgparkins.PrometheusMetrics.Netstandard.DependencyInjection.Autofac</AssemblyName>
     </PropertyGroup>

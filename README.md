@@ -1,6 +1,6 @@
 # net standard metrics for prometheus
 
-This library is the net standard CTM library for prometheus metrics. Currently supporting Counters and Summaries, it 
+This library is the net standard library for prometheus metrics. Currently supporting Counters and Summaries, it 
 also supports the following nuget packages:
 
 * Core package for creating metrics with DI

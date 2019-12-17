@@ -27,7 +27,7 @@ if [ -z "$GO_PIPELINE_COUNTER" ]; then
 fi
 
 if [ -z "$GO_STAGE_COUNTER" ]; then
-    export GO_STAGE_COUNTER=0
+    export GO_STAGE_COUNTER=1
 fi
 
 if [ -z "$NUGET_SUFFIX" ]; then
@@ -56,30 +56,30 @@ docker run --rm \
            -v "$ARTIFACTDIR/:/build" \
            --workdir /build \
            --name app \
-           microsoft/dotnet:2.1-sdk dotnet nuget push rgparkins.PrometheusMetrics.Netstandard.$VERSION.nupkg -k $NUGET_API_KEY --source $NUGET_SERVER
+           microsoft/dotnet:2.1-sdk dotnet nuget push PrometheusMetrics.Netstandard.$VERSION.nupkg -k $NUGET_API_KEY --source $NUGET_SERVER
           
 docker run --rm \
            -v "$ARTIFACTDIR/:/build" \
            --workdir /build \
            --name app \
-           microsoft/dotnet:2.1-sdk dotnet nuget push rgparkins.PrometheusMetrics.Netstandard.Autofac.$VERSION.nupkg -k $NUGET_API_KEY --source $NUGET_SERVER
+           microsoft/dotnet:2.1-sdk dotnet nuget push PrometheusMetrics.Netstandard.Autofac.$VERSION.nupkg -k $NUGET_API_KEY --source $NUGET_SERVER
 
 docker run --rm \
            -v "$ARTIFACTDIR/:/build" \
            --workdir /build \
            --name app \
-           microsoft/dotnet:2.1-sdk dotnet nuget push rgparkins.PrometheusMetrics.Netstandard.Microsoft.$VERSION.nupkg -k $NUGET_API_KEY --source $NUGET_SERVER
+           microsoft/dotnet:2.1-sdk dotnet nuget push PrometheusMetrics.Netstandard.Microsoft.$VERSION.nupkg -k $NUGET_API_KEY --source $NUGET_SERVER
 
 docker run --rm \
            -v "$ARTIFACTDIR/:/build" \
            --workdir /build \
            --name app \
-           microsoft/dotnet:2.1-sdk dotnet nuget push rgparkins.PrometheusMetrics.Netstandard.Stores.Console.$VERSION.nupkg -k $NUGET_API_KEY --source $NUGET_SERVER
+           microsoft/dotnet:2.1-sdk dotnet nuget push PrometheusMetrics.Netstandard.Stores.Console.$VERSION.nupkg -k $NUGET_API_KEY --source $NUGET_SERVER
 
 docker run --rm \
            -v "$ARTIFACTDIR/:/build" \
            --workdir /build \
            --name app \
-           microsoft/dotnet:2.1-sdk dotnet nuget push rgparkins.PrometheusMetrics.Netstandard.Stores.log4net.$VERSION.nupkg -k $NUGET_API_KEY --source $NUGET_SERVER
+           microsoft/dotnet:2.1-sdk dotnet nuget push PrometheusMetrics.Netstandard.Stores.log4net.$VERSION.nupkg -k $NUGET_API_KEY --source $NUGET_SERVER
 
 echo Done!
